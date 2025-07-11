@@ -3,6 +3,6 @@
 
 # Get Test API HEALTH endpoint
 GET {{baseUrl}}/health
-
+###
 # Get Test API ROOMS endpoint
 GET {{baseUrl}}/rooms
