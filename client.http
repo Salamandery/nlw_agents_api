@@ -1,4 +1,4 @@
-# Variables
+# Global Variables
 @baseUrl = http://localhost:3333
 
 # Get Test API HEALTH endpoint
@@ -6,3 +6,31 @@ GET {{baseUrl}}/health
 ###
 # Get Test API ROOMS endpoint
 GET {{baseUrl}}/rooms
+###
+# Create a new room
+# @name createRoom
+POST {{baseUrl}}/rooms
+Content-Type: application/json
+
+{
+  "name": "Test Room",
+  "description": "This is a test room for API testing."
+}
+###
+
+@roomId = {{createRoom.response.body.$.roomId}}
+
+###
+# Get room questions in a room
+# @name getRoomQuestions
+GET {{baseUrl}}/rooms/{{roomId}}/questions
+###
+# Create a new question in a room
+# @name createQuestion
+POST {{baseUrl}}/rooms/{{roomId}}/questions
+Content-Type: application/json
+
+{
+  "question": "What is the purpose of this room?"
+}
+###

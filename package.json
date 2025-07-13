@@ -8,7 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node --env-file .env  --experimental-strip-types ./src/server.ts",
     "dev": "node --env-file .env --experimental-strip-types --watch ./src/server.ts",
-    "db:seed": "node --env-file .env --experimental-strip-types ./src/db/seed.ts"
+    "db:seed": "node --env-file .env --experimental-strip-types ./src/db/seed.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate"
   },
   "author": "",
   "license": "ISC",
