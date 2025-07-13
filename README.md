@@ -280,4 +280,4 @@ Você pode usar o arquivo `client.http` para testar a API no VS Code com a exten
 ## 📝 Licença
 
 Este projeto foi desenvolvido durante o evento NLW da Rocketseat.
-Rodolfo M. F. Abreu
+**Desenvolvido por:** Rodolfo M. F. Abreu
