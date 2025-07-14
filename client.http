@@ -2,9 +2,11 @@
 @baseUrl = http://localhost:3333
 
 # Get Test API HEALTH endpoint
+# @name getHealth
 GET {{baseUrl}}/health
 ###
 # Get Test API ROOMS endpoint
+# @name getRooms
 GET {{baseUrl}}/rooms
 ###
 # Create a new room
@@ -17,9 +19,8 @@ Content-Type: application/json
   "description": "This is a test room for API testing."
 }
 ###
-
+# Set the roomId variable from the response of createRoom
 @roomId = {{createRoom.response.body.$.roomId}}
-
 ###
 # Get room questions in a room
 # @name getRoomQuestions
